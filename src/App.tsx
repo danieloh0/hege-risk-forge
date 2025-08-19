@@ -7,6 +7,9 @@ import { Homepage } from "./pages/Homepage";
 import { StartupDashboard } from "./pages/StartupDashboard";
 import { InvestorDashboard } from "./pages/InvestorDashboard";
 import { RiskMarketplace } from "./pages/RiskMarketplace";
+import { About } from "./pages/About";
+import { Blog } from "./pages/Blog";
+import { Contact } from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,9 +22,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
           <Route path="/startup-dashboard" element={<StartupDashboard />} />
           <Route path="/investor-dashboard" element={<InvestorDashboard />} />
           <Route path="/marketplace" element={<RiskMarketplace />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
